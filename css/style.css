@@ -12445,3 +12445,136 @@ textarea.form-control {
 .consult-btn:hover {
   background-color: #2f4ddf;
 }
+
+
+.hero-banner {
+  position: relative;
+  background: url('/images/bg_1.jpg') ;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+  z-index: 1;
+}
+
+.hero-banner .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1140px;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-align: left;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-light {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .content-wrapper {
+    max-width: 100%;
+  }
+}
+
+.hero-header {
+  position: relative;
+  background: url('/images/bg_1.jpg') ;
+  background-size: cover;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.hero-header .overlayy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-header .container {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 2rem;
+}
+
+.text-wrapper {
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+.text-wrapper .breadcrumbs {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.text-wrapper .breadcrumbs a {
+  color: #fff;
+  text-decoration: underline;
+  margin-right: 5px;
+}
+
+.text-wrapper h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    min-height: 50vh;
+    align-items: center;
+  }
+
+  .text-wrapper h1 {
+    font-size: 2rem;
+  }
+}
