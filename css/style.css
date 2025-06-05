@@ -12205,6 +12205,12 @@ textarea.form-control {
   margin: 0 auto 2rem;
 }
 
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .feature-box {
   background: white;
   padding: 1rem 1.5rem;
@@ -12273,6 +12279,13 @@ textarea.form-control {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .col-right {
+    padding-top: 20px;
+    grid-template-columns: 1fr;
+  }
 }
 
 .tagline {
