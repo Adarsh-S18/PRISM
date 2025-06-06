@@ -12444,6 +12444,21 @@ textarea.form-control {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .aesthetic-container {
+    flex-direction: column;
+  }
+
+  .aesthetic-left {
+    order: 2; /* Move tick features BELOW */
+  }
+
+  .aesthetic-right {
+    order: 1; /* Heading and text come FIRST */
+  }
+}
+
+
 .consult-btn {
   background-color: #3b61f9;
   color: white;
