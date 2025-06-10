@@ -12458,7 +12458,6 @@ textarea.form-control {
   }
 }
 
-
 .consult-btn {
   background-color: #3b61f9;
   color: white;
@@ -12474,10 +12473,9 @@ textarea.form-control {
   background-color: #2f4ddf;
 }
 
-
 .hero-banner {
   position: relative;
-  background: url('/images/bg_1.jpg') ;
+  background: url("/images/bg_1.jpg");
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -12549,7 +12547,7 @@ textarea.form-control {
 
 .hero-header {
   position: relative;
-  background: url('/images/bg_1.jpg') ;
+  background: url("/images/bg_1.jpg");
   background-size: cover;
   min-height: 60vh;
   display: flex;
@@ -12604,5 +12602,203 @@ textarea.form-control {
 
   .text-wrapper h1 {
     font-size: 2rem;
+  }
+}
+.services-container {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #28a745);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(360deg) scale(1.1);
+  background: linear-gradient(135deg, #28a745, #198754);
+}
+
+.service-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.4;
+  margin: 0;
+  text-align: center;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 780px) {
+  /* Add gap between rows when 2 boxes per row */
+  .row > [class*="col-"] {
+    margin-bottom: 20px;
+  }
+
+  /* Remove margin from last row items */
+  .row > [class*="col-"]:nth-last-child(-n + 2) {
+    margin-bottom: 20px;
+  }
+
+  .service-card {
+    padding: 20px 15px;
+    margin-bottom: 0; /* Remove card margin, use column margin instead */
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .service-title {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  /* Compact mobile layout */
+  .mobile-compact .service-card {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .mobile-compact .service-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin: 0 15px 0 0;
+    flex-shrink: 0;
+  }
+
+  .mobile-compact .service-title {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ensure proper spacing for 2-column layout */
+  .row > [class*="col-"] {
+    margin-bottom: 25px;
+  }
+
+  /* Adjust for last row */
+  .row > [class*="col-"]:nth-last-child(-n + 2) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .service-title {
+    font-size: 15px;
+  }
+}
+
+/* Layout Toggle Buttons */
+.layout-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+
+.layout-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  background: #007bff;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.layout-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.layout-btn.active {
+  background: #28a745;
+}
+
+@media (min-width: 769px) {
+  .layout-controls {
+    display: none;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
